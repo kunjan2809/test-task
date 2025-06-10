@@ -1,54 +1,95 @@
-# React + TypeScript + Vite
+# Test Task by Kunjan
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based web application featuring a multi-step form and product display system.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Multi-Step Form**
+  - 3-step form with validation
+  - Progress tracking
+  - Image upload with preview
+  - Form data summary
 
-## Expanding the ESLint configuration
+- **Product Display**
+  - Responsive product grid
+  - Product cards with ratings
+  - Clean and modern UI
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech Stack
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- React
+- TypeScript
+- Tailwind CSS
+- Shadcn UI
+- Axios
+- Vite
+
+## Getting Started
+
+1. **Clone the repository**
+   ```bash
+   git clone [repository-url]
+   cd test-task-by-kunjan
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables**
+   Create a `.env` file in the root directory:
+   ```
+   VITE_API_BASE_URL=your_api_base_url
+   ```
+
+4. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── card/
+│   ├── stepper/
+│   └── ui/
+├── pages/
+├── utils/
+│   ├── api/
+│   └── types/
+└── lib/
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Available Scripts
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run lint` - Run ESLint
+- `npm run preview` - Preview production build
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## Dependencies
+
+### Core
+- react
+- react-dom
+- react-router-dom
+- axios
+- typescript
+
+### UI
+- tailwindcss
+- @radix-ui/react-*
+- lucide-react
+- class-variance-authority
+- tailwind-merge
+
+## Development
+
+- Built with Vite
+- Uses ESLint for code linting
+- TypeScript for type safety
+- Tailwind CSS for styling
+- Shadcn UI for components
